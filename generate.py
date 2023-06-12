@@ -8,6 +8,7 @@ window = tk.Tk()
 window.title("QR 1.0")
 window.geometry("500x300")
 window.resizable(height=False, width=False)
+window.iconbitmap("logocode_2.ico")
 
 var = IntVar()
 var2 = IntVar()
