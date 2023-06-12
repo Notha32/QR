@@ -1,14 +1,14 @@
-import qrcode
-from qrcode import ERROR_CORRECT_L
-from tkinter import *
-from tkinter import filedialog
+from qrcode import *
 import tkinter as tk
+from tkinter import filedialog, Button, Checkbutton, IntVar, Entry, Label
+
 
 window = tk.Tk()
 window.title("QR 1.0")
 window.geometry("500x300")
 window.resizable(height=False, width=False)
 window.iconbitmap("logocode_2.ico")
+
 
 var = IntVar()
 var2 = IntVar()
@@ -84,7 +84,7 @@ def generateqrcode():
         if var18.get():
             color1 = "green"
         
-        qr = qrcode.QRCode(
+        qr = QRCode(
             version = version1,
             error_correction=ERROR_CORRECT_L,
             box_size=3,
@@ -102,7 +102,7 @@ def generateqrcode():
     else:
         a = lien.get()
         b = name.get()
-        qr = qrcode.QRCode(
+        qr = QRCode(
             version = 3,
             error_correction=ERROR_CORRECT_L,
             box_size=3,
